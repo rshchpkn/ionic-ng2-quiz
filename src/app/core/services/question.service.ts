@@ -9,13 +9,17 @@ export class QuestionService {
     public questions = [];
 
     constructor(private restangular: Restangular) {
-        this.questions$ = this.restangular.all("assets/data/questions.json").customGET().map(res => res.questions).do(res => this.questions = res);
+        this.questions$ = this.restangular.all("assets/data/questions.json").customGET().map(res => res.questions).subscribe(res => this.questions = res);
     }
 
     getNextNotAnsweredQuestion() {
         return this.questions.map(item => {
                 return  typeof item.checked === 'undefined' ? item : false
             }).filter(item => item)
+    }
+
+    startTest() {
+        
     }
 
 }

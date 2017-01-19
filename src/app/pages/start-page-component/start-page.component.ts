@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-
 import { NavController, NavParams } from 'ionic-angular';
-import { QuestionService } from "../../app/core/services/question.service";
+
 import { TestQuestion } from "../test-question-component/test-question";
+import { QuestionService } from "../../core/services/question.service";
 
 @Component({
-    selector: 'questions',
-    templateUrl: 'questions.template.html'
+    selector: 'start-page',
+    templateUrl: 'start-page.template.html'
 })
-export class QuestionComponent {
+export class StartPageComponent {
     public questions;
     public questions$;
 
@@ -16,16 +16,10 @@ export class QuestionComponent {
         this.questions$ = this.questionService.questions$;
     }
 
-
-    answerQuestion(question) {
-        if(question.checked >= 0) {
-            return false;
-        }
-        this.navCtrl.push(TestQuestion, {question: question})
-    }
-
-    endTest() {
-
+    startTest() {
+        this.questionService.startTest()
+        let question = this.questionService.getNextNotAnsweredQuestion()[0];
+        this.navCtrl.push(TestQuestion,{question: question})
     }
 
 }

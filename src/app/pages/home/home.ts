@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-import { QuestionComponent } from "../questions-component/questions.component";
+import { StartPageComponent } from "../start-page-component/start-page.component";
 
 @Component({
   selector: 'page-home',
@@ -13,7 +13,7 @@ export class HomePage {
   }
 
   click() {
-    this.navCtrl.push( QuestionComponent )
+    this.navCtrl.push( StartPageComponent )
   }
 
 }
