@@ -1,0 +1,21 @@
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Question {{question.number}}
+        </ion-card-header>
+        <ion-card-content>
+            {{question.text}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <ion-list radio-group inset  [(ngModel)]="question.checked" class="answer-list">
+                <ion-item *ngFor="let answer of question.answers; let i = index" class="answer">
+                    <ion-label>{{answer.text}}</ion-label>
+                    <ion-radio [value]="i"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button class="answer-btn" (click)="answerQuestion()">Answer</button>
+</ion-content>

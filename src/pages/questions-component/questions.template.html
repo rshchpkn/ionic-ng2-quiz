@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Questions
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="endTest()">
+                <ion-title end>Done</ion-title>
+                <ion-icon name="md-done-all" class="done-icon"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list inset>
+        <button ion-item
+                *ngFor="let question of questions$ | async"
+                (click)="answerQuestion(question)"
+                [class.answered]="question.checked >= 0"
+                [disabled]="question.checked >= 0"
+        >
+            Question #{{question.number}}
+        </button>
+    </ion-list>
+
+</ion-content>
