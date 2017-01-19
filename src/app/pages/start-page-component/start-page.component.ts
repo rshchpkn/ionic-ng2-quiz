@@ -17,8 +17,8 @@ export class StartPageComponent {
     }
 
     startTest() {
-        this.questionService.startTest()
-        let question = this.questionService.getNextNotAnsweredQuestion()[0];
+        let question = this.questionService.nextQuestion();
+        // let question = this.questionService.getNextNotAnsweredQuestion()[0];
         this.navCtrl.push(TestQuestion,{question: question})
     }
 

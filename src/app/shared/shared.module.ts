@@ -4,6 +4,7 @@ import { TestQuestion } from "../pages/test-question-component/test-question";
 import { IonicModule } from "ionic-angular";
 import { RestangularModule } from "ng2-restangular";
 import { QuestionComponent } from "../pages/questions-component/questions.component";
+// import { StartPageModule } from "../pages/start-page-component/start-page.module";
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { QuestionComponent } from "../pages/questions-component/questions.compon
     ],
     imports: [
         IonicModule,
-        RestangularModule
+        RestangularModule,
+        // StartPageModule
     ],
     bootstrap: [],
     entryComponents: [

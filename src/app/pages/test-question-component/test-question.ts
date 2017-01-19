@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { NavController, NavParams } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 import { QuestionService } from "../../core/services/question.service";
 
 @Component({
@@ -11,8 +10,8 @@ export class TestQuestion {
   public question;
   public answer;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private questionService: QuestionService) {
-
+  constructor(public navParams: NavParams, public questionService: QuestionService) {
+    debugger;
     this.question = this.navParams.get("question");
   }
 
@@ -20,10 +19,11 @@ export class TestQuestion {
     // let this.question.answers[this.answer];
     this.answer;
 
+
   }
 
   goRoot() {
-    this.navCtrl.pop()
+    debugger
   }
 
 

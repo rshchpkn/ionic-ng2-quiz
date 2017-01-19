@@ -13,5 +13,6 @@ import { IonicModule } from "ionic-angular";
     entryComponents: [
         StartPageComponent
     ],
+    // exports: [StartPageComponent]
 })
 export class StartPageModule {}
