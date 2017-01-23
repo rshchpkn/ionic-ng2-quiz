@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "text": "What is ng-hide directive used for?",
+      "answers": [
+        {
+          "text": "Show a given control",
+          "correct": false
+        },
+        {
+          "text": "Hide a given control",
+          "correct": true
+        },
+        {
+          "text": "Both of the above",
+          "correct": false
+        },
+        {
+          "text": "None of the above",
+          "correct": false
+        }
+      ],
+      "number": 1
+    },
+    {
+      "text": "Which of the following directive bootstraps AngularJS framework?",
+      "answers": [
+        {
+          "text": "ng-init",
+          "correct": false
+        },
+        {
+          "text": "ng-app",
+          "correct": true
+        },
+        {
+          "text": "ng-controller",
+          "correct": false
+        },
+        {
+          "text": "ng-bootstrap",
+          "correct": false
+        }
+      ],
+      "number": 2
+    }
+  ]
+}

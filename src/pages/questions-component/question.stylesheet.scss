@@ -1,6 +1,15 @@
-.answered {
-  background-color: #d6d6d6;
+.question.answeredCorrect {
+  color: #005500;
 }
+
+.question {
+  color: red;
+}
+
 .done-icon {
   font-size: 1.4em;
+}
+
+.right {
+  float: right;
 }
